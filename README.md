@@ -20,9 +20,7 @@ Enable retail businesses to make smarter, data-driven decisions using advanced a
 
 ---
 
-# 🌐 Live Dashboard
-
-👉 Add your deployed Streamlit link here:
+# 🌐 Live Dashboard (Streamlit App)
 
 ```bash
 https://retailsalesanalysispython.streamlit.app/
@@ -351,7 +349,6 @@ This project demonstrates:
 ### Connect:
 
 * GitHub: [kumawat-sanjay](https://github.com/kumawat-sanjay)
-* LinkedIn: [Sanjay Kumawat](https://www.linkedin.com/in/kumawatsanjay/)
+* LinkedIn: [kumawatsanjay](https://www.linkedin.com/in/kumawatsanjay/)
 
 ---
-

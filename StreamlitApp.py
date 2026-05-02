@@ -10,12 +10,12 @@ from src.cleaning import clean_data
 # PAGE CONFIG
 # ==============================
 st.set_page_config(
-    page_title="Retail Sales Dashboard Pro+",
+    page_title="Retail Sales Dashboard",
     layout="wide",
     page_icon="📊"
 )
 
-st.title("📊 Retail Sales Dashboard Pro+")
+st.title("📊 Retail Sales Dashboard")
 st.caption("Advanced Business Intelligence • Forecasting • Strategic Recommendations")
 
 # ==============================
@@ -237,6 +237,9 @@ with tab4:
         'Profit':'sum'
     }).reset_index()
 
+    # 🔥 SORT by Sales (descending)
+    region_data = region_data.sort_values(by='Sales', ascending=True)
+
     fig_region = px.bar(
         region_data,
         x='Sales',
@@ -245,6 +248,7 @@ with tab4:
         color='Profit',
         title='Regional Sales & Profitability'
     )
+
     st.plotly_chart(fig_region, use_container_width=True)
 
 # ==============================
@@ -290,7 +294,7 @@ with tab6:
     if profit_margin < 0.1:
         st.warning("⚠️ Low profit margin → Consider pricing optimization")
 
-    st.write("### 🚨 Loss-Making Products")
+    st.write("### 🚨 Top 5 Loss-Making Products")
     st.dataframe(risky_products.reset_index().rename(columns={0:'Profit'}))
 
     st.write("### 📌 Strategic Recommendations")
