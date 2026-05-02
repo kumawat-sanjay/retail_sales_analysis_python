@@ -179,7 +179,7 @@ with tab1:
     st.plotly_chart(fig, use_container_width=True)
 
     monthly_sales['MoM Growth %'] = monthly_sales['Sales'].pct_change() * 100
-    fig_growth = px.bar(monthly_sales, x='Month', y='MoM Growth %', title="Month-over-Month Growth")
+    fig_growth = px.bar(monthly_sales, x='Month', y='MoM Growth %', title="Month-over-Month Sales Growth")
     st.plotly_chart(fig_growth, use_container_width=True)
 
     fig_discount = px.scatter(
